@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Glassick's Weather App</title>
+</head>
+
+<body>
+
+  <nav class='navbar navbar-expand-lg navbar-light bg-light'>
+    <span class='navbar-brand mx-auto h1'>Glassick's Weather App</span>
+  </nav>
+
+  <div class='container'>
+    <div class='row'>
+      <div class='col-md-3'>
+        <div class='card citySearchDiv'>
+          <div class='card-body'>
+            <label>Type Your City:</label>
+            <div class='input-group mb-3'>
+              <input id='cityName' type='text' class='form-control' placeholder="Menifee, CA">
+              <div class='input-group-append'>
+                <button id='findWeather' class='btn btn-success' type='submit'>Get Weather
+                </button>
+              </div>
+            </div>
+            <ul id='previousCities' class="list-group list-group-flush"></ul>
+          </div>
+        </div>
+      </div>
+      <div class='col-md-9'>
+        <div class='row'>
+          <div class='card'>
+            <div class='card-body'>
+              <h5 class='card-title' id='cityTitle'>City</h5>
+              <ul>
+                <li class='card-text'><span id='openWeatherIcon'></span></li>
+                <li class='card-text' id='currentTemp'> Current Temperature: </li>
+                <li class='card-text' id='currentMin'> Low:</li>
+                <li class='card-text' id='currentMax'> High:</li>
+                <li class='card-text' id='currentHumidity'>Humidity: </li>
+                <li class='card-text' id='currentWindspeed'>Windspeed: </li>
+                <li class='card-text' id='currentUV'>UV Index: </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class='row'>
+          <h2 class='card-title'> 5-Day Forecast</h2>
+        </div>
+        <div class='row' id='5DayForecast'></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Start Footer -->
+  <nav class="navbar fixed-bottom footer">
+    <div class="footer-text">Copyright</div>
+  </nav>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js'></script>
+  <!-- <script src="https://kit.fontawesome.com/6cbff65fb8.js" crossorigin="anonymous"></script> -->
+  <script src='./assets/js/index.js'></script>
+</body>
+
+</html>
